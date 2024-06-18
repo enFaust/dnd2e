@@ -1,12 +1,114 @@
-<HTML>
-<HEAD>
-  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-<TITLE>PHBRE</TITLE>
-</HEAD>
-<frameset rows="*,106" framespacing=0 frameborder=0>
-  <frame src="files\title.html" marginwidth=4 name="main">
-  <frame src="files\contents.html" marginwidth=4 name="contents">
-</frameset>
-<BODY>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            background-image: url('img/background.jpg');
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #900; /* Dark red */
+            color: #FFD700; /* Golden color for the text */
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #600 1px solid; /* A darker shade of red for the border */
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .content a {
+            width: 24%;
+            text-decoration: none; /* Remove the underline from links */
+        }
+
+        .book {
+            padding: 80px;
+            margin: 0px;
+           /* box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.1);*/ /* Lighter shadow for contrast */
+            background-size: cover;
+            position: relative;
+            color: #FFD700; /* Golden color text */
+            display: block; /* Make the div behave like a block element */
+            height: 100%;
+        }
+
+        .book-title {
+            position: relative;
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .content div p {
+            position: relative;
+        }
+
+        /* Unique classes for background images */
+        .players-handbook {
+            background-image: url('img/players-handbook-image-url.jpg');
+        }
+
+        .dmg {
+            background-image: url('img/dungeon-masters-guide.png');
+        }
+
+        .monster-manual {
+            background-image: url('img/monster-manual.png');
+        }
+        .ravenloft {
+            background-image: url('img/domain-of-dread.png');
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Advanced Dungeons & Dragons</h1>
+</header>
+<div class="container">
+    <div class="content">
+        <a href="web-books/players_handbook/index.html">
+            <div class="book players-handbook">
+                <h2 class="book-title">Player's Handbook</h2>
+            </div>
+        </a>
+        <a href="web-books/dmg/index.html">
+            <div class="book dmg">
+                <h2 class="book-title">Dungeon Master's Guide (DMG)</h2>
+            </div>
+        </a>
+        <!--<a href="#">
+            <div class="book monster-manual">
+                <h2 class="book-title">Monster Manual</h2>
+            </div>
+        </a>
+        <a href="#">
+            <div class="book ravenloft">
+                <h2 class="book-title">Ravenloft</h2>
+            </div>
+        </a>-->
+    </div>
+</div>
+</body>
+</html>
