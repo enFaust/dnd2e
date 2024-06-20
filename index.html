@@ -3,137 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Book</title>
-    <style>
-        /* Общие стили */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000; /* Черный фон */
-            background-image: url('img/background.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background: #900; /* Темно-красный */
-            color: #FFD700; /* Золотой цвет текста */
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #600 1px solid; /* Более темный оттенок красного для границы */
-        }
-
-        header h1 {
-            text-align: center;
-            margin: 0;
-        }
-
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .content a {
-            flex: 1; /* Растягиваем ссылки на всю доступную ширину */
-            min-width: 250px; /* Минимальная ширина для каждой книги */
-            text-decoration: none; /* Убираем подчеркивание у ссылок */
-            margin: 10px; /* Добавляем немного отступа между книгами */
-        }
-
-        .book {
-            padding: 20px;
-            background-size: contain; /* Изображение будет полностью видно */
-            background-repeat: no-repeat; /* Предотвращаем повторение изображения */
-            background-position: center; /* Центрируем изображение */
-            position: relative;
-            color: #FFD700; /* Золотой цвет текста */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 200px; /* Фиксированная высота для каждой книги */
-        }
-
-        .book-title {
-            text-align: center;
-            font-size: 20px;
-            margin: 0;
-        }
-
-        /* Стили для разных размеров экранов */
-        @media (max-width: 768px) {
-            .book {
-                padding: 10px;
-                height: 150px; /* Меньшая высота для мобильных устройств */
-            }
-
-            .book-title {
-                font-size: 16px; /* Меньший размер шрифта для мобильных устройств */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .book {
-                height: 100px; /* Еще меньше для очень маленьких экранов */
-            }
-
-            .book-title {
-                font-size: 14px; /* Еще меньший размер шрифта для очень маленьких экранов */
-            }
-        }
-
-        /* Уникальные классы для фоновых изображений */
-        .players-handbook {
-            background-image: url('img/players-handbook-image-url.jpg');
-        }
-
-        .dmg {
-            background-image: url('img/dungeon-masters-guide.png');
-        }
-
-        .monster-manual {
-            background-image: url('img/monster-manual.png');
-        }
-        .ravenloft {
-            background-image: url('img/domain-of-dread.png');
-        }
-    </style>
+    <title>AD&D Books</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<header>
-    <h1>Advanced Dungeons & Dragons</h1>
-</header>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="AD&D Logo" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Книги правил</a>
+                </li>
+           <!--     <li class="nav-item">
+                    <a class="nav-link" href="#">Приключения</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Дополнения</a>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Main Content -->
 <div class="container">
-    <div class="content">
-        <a href="web-books/players_handbook/index.html">
-            <div class="book players-handbook">
-                <h2 class="book-title">Player's Handbook</h2>
+    <div class="row">
+
+        <header class="text-red text-center p-4 mb-2">
+            <h1>Advanced Dungeons & Dragons</h1>
+        </header>
+
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-item active">
+                    <img src="img/players-handbook.jpg" class="d-block w-100 carousel-image" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Players Handbook</h5>
+                        <p>Книга игрока для Advanced Dungeons & Dragons.</p>
+                        <a href="web-books/players_handbook/index.html" class="btn btn-primary">Читать</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/dungeon-masters-guide.png" class="d-block w-100 carousel-image" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dungeon Masters Guide</h5>
+                        <p>Книга мастера для Advanced Dungeons & Dragons.</p>
+                        <a href="web-books/dmg/index.html" class="btn btn-primary">Читать</a>
+                    </div>
+                </div>
             </div>
-        </a>
-        <a href="web-books/dmg/index.html">
-            <div class="book dmg">
-                <h2 class="book-title">DMG</h2>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">Книга Правил</strong>
+                            <h3 class="mb-0">Player's Handbook</h3>
+                            <p class="card-text mb-auto">Вход в мир AD&D, где вы создаете героев для приключений и битв.
+                                Книга дает доступ к инструкциям и правилам, описывая классы, расы и заклинания для вашего приключения.</p>
+                            <a href="web-books/players_handbook/index.html" class="stretched-link">Начать читать</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <!-- Replace with your image -->
+                            <img src="img/players-handbook.jpg" alt="Thumbnail" width="200" height="250"
+                                 style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary">Книга Правил</strong>
+                            <h3 class="mb-0">Dungeon Masters Guide</h3>
+                            <p class="mb-auto">Это книга для создания захватывающих AD&D приключений. Получите инструменты для миров,
+                                сюжетов и управления сессиями, обогащая игру советами по встречам, NPC и магии.</p>
+                            <a href="web-books/dmg/index.html" class="stretched-link">Начать читать</a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <!-- Replace with your image -->
+                            <img src="img/players-handbook.jpg" alt="Thumbnail" width="200" height="250"
+                                 style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </a>
-        <!--<a href="#">
-            <div class="book monster-manual">
-                <h2 class="book-title">Monster Manual</h2>
-            </div>
-        </a>
-        <a href="#">
-            <div class="book ravenloft">
-                <h2 class="book-title">Ravenloft</h2>
-            </div>
-        </a>-->
+        </div>
     </div>
 </div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-4">
+    <p>© 2023 Advanced Dungeons & Dragons Collection</p>
+</footer>
+
+<!-- Bootstrap JS and its dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>
