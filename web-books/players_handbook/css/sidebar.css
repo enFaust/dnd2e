@@ -1,0 +1,11 @@
+.nav-link:hover {
+    color: #707070 !important; /* Светло-серый цвет */
+}
+
+.custom-toggler {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,31 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#page{
+    background-image: url('../files/img/cn.jpg');
+    color: blue;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content {
+    flex: 1;
+}
+
+#footer {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

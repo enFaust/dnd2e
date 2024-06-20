@@ -1,12 +1,129 @@
-<HTML>
-<HEAD>
-    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
-    <TITLE>PHBRE</TITLE>
-</HEAD>
-<frameset rows="*,106" framespacing=0 frameborder=0>
-    <frame src="files\title.html" marginwidth=4 name="main">
-    <frame src="files\contents.html" marginwidth=4 name="contents">
-</frameset>
-<BODY>
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Sidebar</title>
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+            integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css"
+          integrity="sha384-BY+fdrpOd3gfeRvTSMT+VUZmA728cfF9Z2G42xpaRkUGu2i3DyzpTURDo5A6CaLK" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../img/logo.png" alt="AD&D Logo" height="30">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Книги правил</a>
+                </li>
+                <!--     <li class="nav-item">
+                         <a class="nav-link" href="#">Приключения</a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link" href="#">Дополнения</a>
+                     </li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div id="page">
+
+
+<button class="btn btn-light custom-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div class="row">
+
+    <!-- Offcanvas навигация -->
+    <div class="offcanvas offcanvas-start bg-dark" tabindex="-1" id="offcanvasNavbar"
+         aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+            <h4 class="offcanvas-title text-danger" id="offcanvasBookTitle">Книга игрока</h4>
+            <!-- Заголовок "Книга игрока" -->
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                <li class="nav-item"><a href="files/title.html" class="nav-link text-white">Титульный лист</a></li>
+                <li class="nav-item"><a href="files/glossary.html" class="nav-link text-white">Глоссарий</a></li>
+                <li class="nav-item"><a href="files/tables.html" class="nav-link text-white">Список таблиц</a></li>
+                <li class="nav-item"><a href="files/chapter.html" class="nav-link text-white">Вступление</a></li>
+                <li class="nav-item"><a href="files/chapter1.html" class="nav-link text-white">Глава 1: Способности
+                    игрового персонажа</a></li>
+                <li class="nav-item"><a href="files/chapter2.html" class="nav-link text-white">Глава 2: Расы игрового
+                    персонажа</a></li>
+                <li class="nav-item"><a href="files/chapter3.html" class="nav-link text-white">Глава 3: Классы игрового
+                    персонажа</a></li>
+                <li class="nav-item"><a href="files/chapter4.html" class="nav-link text-white">Глава 4: Характер</a></li>
+                <li class="nav-item"><a href="files/chapter5.html" class="nav-link text-white">Глава 5: Умения
+                    (дополнительно)</a></li>
+                <li class="nav-item"><a href="files/chapter6.html" class="nav-link text-white">Глава 6: Деньги и
+                    снаряжение</a></li>
+                <li class="nav-item"><a href="files/chapter7.html" class="nav-link text-white">Глава 7: Магия</a></li>
+                <li class="nav-item"><a href="files/chapter8.html" class="nav-link text-white">Глава 8: Опыт</a></li>
+                <li class="nav-item"><a href="files/chapter9.html" class="nav-link text-white">Глава 9: Бой</a></li>
+                <li class="nav-item"><a href="files/chapter10.html" class="nav-link text-white">Глава 10: Сокровища</a>
+                </li>
+                <li class="nav-item"><a href="files/chapter11.html" class="nav-link text-white">Глава 11: Столкновения</a>
+                </li>
+                <li class="nav-item"><a href="files/chapter12.html" class="nav-link text-white">Глава 12: NPC</a></li>
+                <li class="nav-item"><a href="files/chapter13.html" class="nav-link text-white">Глава 13: Видение и
+                    свет</a></li>
+                <li class="nav-item"><a href="files/chapter14.html" class="nav-link text-white">Глава 14: Время и
+                    передвижение</a></li>
+                <li class="nav-item"><a href="files/wizind.html" class="nav-link text-white">Заклятья Волшебников</a></li>
+                <li class="nav-item"><a href="files/priind.html" class="nav-link text-white">Заклятья Жрецов</a></li>
+                <li class="nav-item"><a href="files/bonus.html" class="nav-link text-white">Бонус</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-10 col-md-10 col-lg-10 col-xl-10 mx-auto">
+                <div id="content-container" class="container mt-5">
+                    <!--content-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="bg-dark text-white text-center p-3 mt-4">
+    <p>© 2023 Advanced Dungeons & Dragons Collection</p>
+</footer>
+
+<!-- Bootstrap JS and its dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+<script src="js/content-change.js"></script>
+</body>
+</html>
